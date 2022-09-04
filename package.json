@@ -4,13 +4,14 @@
   "description": "TypeScript Scaffold",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "dev:comment": "启动开发环境，允许实时编译",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .ts 的文件",
     "eslint": "eslint --fix src --ext .ts --max-warnings=0",
     "prettier:comment": "自动格式化 src 目录下的所有 .ts 文件",
-    "prettier": "prettier --write \"src/**/*.ts\""
+    "prettier": "prettier --write \"src/**/*.ts\"",
+    "build": "npm run eslint && npm run prettier && rm -rf lib && tsc --build",
     "commit:comment": "引导设置规范化的提交信息",
     "commit": "cz"
   },
