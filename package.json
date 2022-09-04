@@ -1,0 +1,37 @@
+{
+  "name": "ts-cli",
+  "version": "1.0.0",
+  "description": "TypeScript Scaffold",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    
+    "dev:comment": "启动开发环境，允许实时编译",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+
+    "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .ts 的文件",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0",
+    
+    "commit:comment": "引导设置规范化的提交信息",
+    "commit": "cz"
+  },
+  "author": "ligen131",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^18.7.14",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.0",
+    "prettier": "^2.7.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
