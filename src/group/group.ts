@@ -19,6 +19,4 @@
  */
 'use strict';
 
-import { EXPORT_TEST } from './group/group';
-
-console.log(EXPORT_TEST);
+export const EXPORT_TEST = 'Hello, the world!';
